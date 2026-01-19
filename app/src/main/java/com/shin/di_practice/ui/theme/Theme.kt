@@ -1,14 +1,21 @@
 package com.shin.di_practice.ui.theme
 
 import android.os.Build
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.CardElevation
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ComposableInferredTarget
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.Dp
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -54,4 +61,17 @@ fun TestTheme(
         typography = Typography,
         content = content
     )
+}
+
+@Composable
+public fun Surface(
+    modifier: Modifier,
+    shape: Shape,
+    color: Color,
+    contentColor: Color,
+    tonalElevation: Dp,
+    shadowElevation: Dp,
+    border: BorderStroke,
+    content: @Composable () -> Unit
+    ): Unit {
 }
